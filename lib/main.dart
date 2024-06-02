@@ -1,8 +1,11 @@
 import 'package:flutter/material.dart';
-import 'package:gen_atas/pages/homePage.dart';
+import 'package:gen_atas/pages/EtapaOnePage.dart';
+import 'package:gen_atas/pages/EtapaThreePage.dart';
+import 'package:gen_atas/pages/EtapaTwoPage.dart';
 
 void main() {
-  runApp(const MaterialApp(
-    home: Homepage(),
-  ));
+  runApp(MaterialApp(
+      home: EtapaTwoPage(
+    data: {},
+  )));
 }

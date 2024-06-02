@@ -2,14 +2,14 @@
 
 import 'package:flutter/material.dart';
 
-class Homepage extends StatefulWidget {
-  const Homepage({super.key});
+class GenPage extends StatefulWidget {
+  const GenPage({super.key});
 
   @override
-  State<Homepage> createState() => _HomepageState();
+  State<GenPage> createState() => _GenPageState();
 }
 
-class _HomepageState extends State<Homepage> {
+class _GenPageState extends State<GenPage> {
   @override
   Widget build(BuildContext context) {
     double largura = MediaQuery.of(context).size.width;
@@ -31,7 +31,7 @@ class _HomepageState extends State<Homepage> {
                 child: Container(
                   decoration: BoxDecoration(
                       image: DecorationImage(
-                          image: AssetImage("images/imgBackground.png"),
+                          image: const AssetImage("images/imgBackground.png"),
                           fit: largura > 1450
                               ? BoxFit.fitWidth
                               : BoxFit.fitHeight)),
@@ -43,6 +43,17 @@ class _HomepageState extends State<Homepage> {
                 flex: 100,
                 child: Container(
                   color: Colors.green,
+                  child: const Column(
+                    children: [
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: [
+                          Image(image: AssetImage("images/logo.png")),
+                          Text("GenAtas")
+                        ],
+                      )
+                    ],
+                  ),
                 )),
             // ======================================================================
           ],
